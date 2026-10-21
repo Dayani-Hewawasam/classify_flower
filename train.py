@@ -26,7 +26,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 # stratify=y      -> each split keeps the same class proportions
 
 # --- 5. CREATE AND TRAIN THE MODEL ---
-model = KNeighborsClassifier(n_neighbors=10)
+model = KNeighborsClassifier(n_neighbors=1)
 model.fit(X_train, y_train)          # "learning" happens here
 
 # --- 6. EVALUATE ON UNSEEN DATA ---
