@@ -1,0 +1,44 @@
+experiment,setting,accuracy
+k,1,0.9667
+k,3,1.0
+k,5,1.0
+k,9,1.0
+k,15,0.9667
+k,30,0.9333
+k,50,0.9
+test_size,0.1,1.0
+test_size,0.2,1.0
+test_size,0.3,0.9778
+test_size,0.5,0.9467
+test_size,0.7,0.981
+test_size,0.9,0.9111
+train_fraction,0.05,0.3333
+train_fraction,0.1,0.6667
+train_fraction,0.25,0.9333
+train_fraction,0.5,0.9333
+train_fraction,0.75,0.9667
+train_fraction,1.0,1.0
+noise,0,1.0
+noise,0.1,0.9667
+noise,0.3,0.9667
+noise,0.5,0.9
+noise,1.0,0.7667
+noise,2.0,0.5333
+random_state,0,1.0
+random_state,1,0.9667
+random_state,2,0.9667
+random_state,3,0.9333
+random_state,4,0.9333
+random_state,5,0.9667
+random_state,6,0.9333
+random_state,7,1.0
+random_state,8,0.9667
+random_state,9,1.0
+features,all 4,1.0
+features,petal only,0.9667
+features,sepal only,0.7667
+model,KNN,1.0
+model,Decision tree,0.9333
+model,Logistic reg.,0.9667
+shuffled_labels,real labels,1.0
+shuffled_labels,shuffled,0.4
