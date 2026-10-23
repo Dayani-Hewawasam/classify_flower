@@ -26,7 +26,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 # stratify=y      -> each split keeps the same class proportions
 
 # --- 5. CREATE AND TRAIN THE MODEL ---
-model = KNeighborsClassifier(n_neighbors=10)
+model = KNeighborsClassifier(n_neighbors=5)
 model.fit(X_train, y_train)          # "learning" happens here
 
 # --- 6. EVALUATE ON UNSEEN DATA ---
@@ -43,3 +43,15 @@ plt.savefig("plot.png")
 
 # --- 8. SAVE THE TRAINED MODEL ---
 joblib.dump(model, "model.pkl")
+
+import csv, os
+
+acc = accuracy_score(y_test, preds)
+row = {"n_neighbors": 5, "test_size": 0.2, "random_state": 42, "accuracy": round(acc, 4)}
+
+new_file = not os.path.exists("results.csv")
+with open("results.csv", "a", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=row.keys())
+    if new_file:
+        writer.writeheader()
+    writer.writerow(row)
