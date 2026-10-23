@@ -1,4 +1,4 @@
-# Iris Flower Classifier: my first machine learning project
+# Iris Flower Classifier
 
 ## 1. What is this project?
 
